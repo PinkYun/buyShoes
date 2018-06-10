@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>乐淘分类页面</title>
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="./less/search.less">
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <a href="#" class="fa fa-arrow-left"></a>
+        <h4 class="search-center">搜索中心</h4>
+    </header>
+
+    <!-- 主体部分 -->
+    <main id="main">
+        <!-- 搜索框部分 -->
+        <div class="search-m">
+            <form action="">
+                <input type="search" class="form-search" placeholder="请输入你的需要的商品">
+            </form>
+            <a href="#" class="mui-btn mui-btn-primary btn-search">搜索</a>
+        </div>
+        <!-- 搜索记录部分 -->
+        <div class="record">
+            <span class="mui-pull-left">搜索记录</span>
+            <a href="#" class="fa fa-trash mui-pull-right clear-search">清空记录</a>
+        </div>
+        <!-- 搜索记录的列表部分 -->
+        <div class="search-list">
+            <ul>
+                <li>
+                    <a href="#" class="content-list">
+                        <span>阿迪达斯</span>
+                        <span  class="fa fa-times"></span>
+                    </a>
+                </li>
+               
+            </ul>
+        </div>
+    </main>
+
+
+    <!-- 9.底部区域 -->
+    <footer id="footer">
+        <a href="./index.html" class="fa fa-home ">
+            <span>首页</span>
+        </a>
+        <a href="#" class="fa fa-bars active">
+            <span>分类</span>
+        </a>
+        <a href="#" class="fa fa-shopping-cart ">
+            <span>购物车</span>
+        </a>
+        <a href="#" class="fa fa-user ">
+            <span>会员中心</span>
+        </a>
+    </footer>
+
+
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 模板引擎 -->
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./js/search.js"></script>
+
+    <!-- 定义模板 起名字 -->
+    <script type="text/html" id="queryHistoryTmp">
+        {{if rows.length}}
+            <ul>
+            {{each rows as value i}}
+                <li>
+                    <a href="./product.html" class="content-list">
+                        <span>{{value.search}}</span>
+                        <span class="fa fa-times delete-search" data-id={{value.id}}></span>
+                    </a>
+                </li>
+            {{/each}}
+            </ul>
+       {{/if}} 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+@import './base.less';
+* {
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+#header{
+    .search-center{
+        font-weight: 400;
+    }
+}
+
+#main{
+    padding-top: 45px;
+    padding-bottom: 45px;
+
+    .search-m {
+        padding: 10px;
+        position: relative;
+        form{
+            padding-right: 50px;
+            input{
+                text-align: left;
+                height: 33px;
+                margin-bottom: 0;
+                border: 1px solid @color;
+                border-radius: 3px 0px 0px 3px;
+            }
+        }
+        .btn-search{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            border-radius: 0px 3px 3px 0px;            
+        }
+    }
+
+    .record{
+        padding: 0px 10px;
+        span{
+            font-size: 14px;
+        }
+        a{
+            font-size: 14px;
+            color: #666;
+        }
+    }
+
+    .search-list{
+        padding: 10px;
+        margin-top: 20px;
+        ul{
+            border: 1px solid #ccc;
+            li{
+                border-bottom: 1px solid #ccc;
+                position: relative;
+                &:last-child{
+                    border-bottom: 0;
+                }
+               .content-list{
+                    
+                    color: #666;
+                    span{
+                        font-size: 14px;
+                        &:last-child{
+                            position: absolute;
+                            right: 10px;
+                            top: 5px;
+                        }
+                    }
+                   
+               }
+            }
+        }
+    }
+}
